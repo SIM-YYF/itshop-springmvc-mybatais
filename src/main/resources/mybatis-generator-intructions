@@ -1,0 +1,10 @@
+1. 该工程是spring mvc + mybatais 集成
+2. 工程中的UserMapper(操作数据库的类)  和  User(对象模型) 以及 resources目录下的UserMapper.xml文件，都是通过
+mybatis-generator-core-1.3.2.jar结合generatorConfig.xml 生成文件，执行相应的命令来生成的。
+
+3. 如何通过mybatis-generator-core-1.3.2.jar 和 generatorConfig.xml 来生成对应的 UserMapper，User 和 UserMapper.xml？
+
+    3-1：将mybatis-generator-core-1.3.2.jar 和 generatorConfig.xml放在同一个目录下面，打开命令行，输入
+        java -jar mybatis-generator-core-1.3.2.jar -configfile generatorConfig.xml 该行命令。
+        就会在对应的目录生成。但是，需要注意：在生成UserMapper，User 和 UserMapper.xml 时，一定要创建好对应的文件夹。
+        这些文件夹的路径，在generatorConfig.xml这个文件中有说明
